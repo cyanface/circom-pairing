@@ -35,7 +35,7 @@ echo "DONE ($((end-start))s)"
 
 echo "****VERIFYING WITNESS****"
 start=`date +%s`
-./"$CIRCUIT_NAME" ../../../scripts/"$CIRCUIT_NAME"/input_"$CIRCUIT_NAME".json ../witness.wtns
+#./"$CIRCUIT_NAME" ../../../scripts/"$CIRCUIT_NAME"/input_"$CIRCUIT_NAME".json ../witness.wtns
 end=`date +%s`
 echo "DONE ($((end-start))s)"
 
