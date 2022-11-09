@@ -14,7 +14,7 @@ fi
 
 if [ ! -d "$BUILD_DIR" ]; then
     echo "No build directory found. Creating build directory..."
-    mkdir "$BUILD_DIR"
+    mkdir -p "$BUILD_DIR"
 fi
 
 echo $PWD
