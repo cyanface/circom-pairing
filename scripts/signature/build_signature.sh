@@ -35,7 +35,7 @@ echo "DONE ($((end-start))s)"
 
 echo "****VERIFYING WITNESS****"
 start=`date +%s`
-#./"$CIRCUIT_NAME" ../../../scripts/"$CIRCUIT_NAME"/input_"$CIRCUIT_NAME".json ../witness.wtns
+./"$CIRCUIT_NAME" ../../../scripts/"$CIRCUIT_NAME"/input_"$CIRCUIT_NAME".json ../witness.wtns
 end=`date +%s`
 echo "DONE ($((end-start))s)"
 
@@ -50,19 +50,19 @@ echo "DONE ($((end-start))s)"
 
 echo "****CONTRIBUTE TO PHASE 2 CEREMONY****"
 start=`date +%s`
-node "$SNARKJSCLI" zkey contribute -verbose "$CIRCUIT_NAME"_0.zkey "$CIRCUIT_NAME".zkey -n="First phase2 contribution" -e="some random text 5555" > contribute.out
+#node "$SNARKJSCLI" zkey contribute -verbose "$CIRCUIT_NAME"_0.zkey "$CIRCUIT_NAME".zkey -n="First phase2 contribution" -e="some random text 5555" > contribute.out
 end=`date +%s`
 echo "DONE ($((end-start))s)"
 
 echo "****VERIFYING FINAL ZKEY****"
 start=`date +%s`
-node --trace-gc --trace-gc-ignore-scavenger --max-old-space-size=2048000 --initial-old-space-size=2048000 --no-global-gc-scheduling --no-incremental-marking --max-semi-space-size=1024 --initial-heap-size=2048000 --expose-gc "$SNARKJSCLI" zkey verify -verbose "$CIRCUIT_NAME".r1cs "$PHASE1" "$CIRCUIT_NAME".zkey > verify.out
+#node --trace-gc --trace-gc-ignore-scavenger --max-old-space-size=2048000 --initial-old-space-size=2048000 --no-global-gc-scheduling --no-incremental-marking --max-semi-space-size=1024 --initial-heap-size=2048000 --expose-gc "$SNARKJSCLI" zkey verify -verbose "$CIRCUIT_NAME".r1cs "$PHASE1" "$CIRCUIT_NAME".zkey > verify.out
 end=`date +%s`
 echo "DONE ($((end-start))s)"
 
 echo "****EXPORTING VKEY****"
 start=`date +%s`
-node "$SNARKJSCLI" zkey export verificationkey "$CIRCUIT_NAME".zkey vkey.json -v
+#node "$SNARKJSCLI" zkey export verificationkey "$CIRCUIT_NAME".zkey vkey.json -v
 end=`date +%s`
 echo "DONE ($((end-start))s)"
 
